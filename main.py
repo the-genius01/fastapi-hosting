@@ -13,7 +13,7 @@ class SearchRequest(BaseModel):
 class SearchResponse(BaseModel):
     response: str
 
-@app.post("/search", response_model=SearchResponse)
+@app.post("/", response_model=SearchResponse)
 def search(request: SearchRequest) -> SearchResponse:
     response = openai.Completion.create(
         engine="text-davinci-003",
