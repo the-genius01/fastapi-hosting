@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 app = FastAPI()
 
