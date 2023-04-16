@@ -2,8 +2,13 @@ from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel
 import openai
+import os
 
-openai.api_key = "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"
+#openai.api_key = "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"
+
+
+openai.organization = "org-Fjb39r5N9zfTvgdoeasm0OLi"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 
